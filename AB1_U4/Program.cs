@@ -23,6 +23,7 @@ namespace school_programming
                         var e = Console.ReadLine();
                         int input = int.Parse(e);
 
+                        // Verify input
                         if (input > 45) {
                             Console.WriteLine("Input range exceeded.");
                         } else {
@@ -32,7 +33,7 @@ namespace school_programming
                     }
                 }
 
-                // Present some shit
+                // Generate random numbers
                 var rand = new Random();
                 for (int i = 0; i <= 6; i++) {
                     lottoList.Add(rand.Next(45));
@@ -42,12 +43,14 @@ namespace school_programming
                 returnList(lottoList);
                 Console.WriteLine();
 
+                // Compare random numbers with user input
                 foreach (int lottoNumber in lottoList) {
                     if (userInput.Contains(lottoNumber)) {
                         matchList.Add(lottoNumber);
                     }
                 }
 
+                // Inform player
                 if (matchList.Count > 0) {
                     Console.Write("You matched these numbers: ");
                     returnList(matchList);
@@ -58,6 +61,7 @@ namespace school_programming
                 Console.WriteLine();
                 Console.WriteLine();
 
+                // Prompt for retry
                 Console.Write("Retry? (y/n): ");
                 if (Console.ReadLine() != "y") {
                     gameActive = false;
