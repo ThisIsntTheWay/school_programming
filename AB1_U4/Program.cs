@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace school_programming
 {
@@ -14,12 +16,13 @@ namespace school_programming
             Console.WriteLine("Awaiting input (1-45)");
 
             // Prompt for input
-            for (int i = 0; i >= 6; i++) {
-                Console.WriteLine("Enter number #" + i + ": ");
-                int input = int.Parse(Console.ReadLine());
-
+            for (int i = 0; i <= 5; i++) {
                 bool canContinue = false;
                 while (!canContinue) {
+                    Console.Write("Enter number #" + (i+1) + ": ");
+                    var e = Console.ReadLine();
+                    int input = int.Parse(e);
+
                     if (input > 45) {
                         Console.WriteLine("Input range exceeded.");
                     } else {
@@ -32,18 +35,33 @@ namespace school_programming
 
             // Present some shit
             var rand = new Random();
-            for (int i = 0; i >= 6; i++) {
-                lottoList.Add(rand.Next());
+            for (int i = 0; i <= 6; i++) {
+                lottoList.Add(rand.Next(45));
             }
 
-            Console.WriteLine("Random numbers: " + lottoList);
+            Console.Write("Random numbers: ");
+            returnList(lottoList);
+            Console.WriteLine();
+
             foreach (int lottoNumber in lottoList) {
                 if (userInput.Contains(lottoNumber)) {
                     matchList.Add(lottoNumber);
                 }
             }
 
-            Console.WriteLine("You matched these numbers: " + matchList);
+            if (matchList.Count <= 0) {
+                Console.Write("You matched these numbers: ");
+                returnList(matchList);
+            } else {
+                Console.WriteLine("No number");
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void returnList( List<int> myCol )  {
+            foreach ( Object obj in myCol )
+                Console.Write( "{0} ", obj );
         }
     }
 }
