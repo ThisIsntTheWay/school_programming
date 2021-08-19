@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 
 namespace school_programming
 {
@@ -18,7 +16,7 @@ namespace school_programming
             // Prompt for input
             bool gameActive = true;
             while (gameActive) {
-    for (int i = 0; i <= 5; i++) {
+                for (int i = 0; i <= 5; i++) {
                     bool canContinue = false;
                     while (!canContinue) {
                         Console.Write("Enter number #" + (i+1) + ": ");
