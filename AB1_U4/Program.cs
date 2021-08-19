@@ -50,13 +50,14 @@ namespace school_programming
                     }
                 }
 
-                if (matchList.Count <= 0) {
+                if (matchList.Count > 0) {
                     Console.Write("You matched these numbers: ");
                     returnList(matchList);
                 } else {
-                    Console.WriteLine("No number");
+                    Console.WriteLine("Matched no numbers!");
                 }
 
+                Console.WriteLine();
                 Console.WriteLine();
 
                 Console.Write("Retry? (y/n): ");
