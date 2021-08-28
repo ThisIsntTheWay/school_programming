@@ -43,8 +43,6 @@ namespace U7_Pro
                             }
                         }
                     }
-
-                    // Evidence: https://i.imgur.com/iPDVDqO.png
                 }
             }
         }
