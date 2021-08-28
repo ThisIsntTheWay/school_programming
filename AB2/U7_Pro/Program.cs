@@ -24,7 +24,7 @@ namespace U7_Pro
                         DirectoryInfo info = Directory.CreateDirectory(path);
                         //Console.WriteLine("> Dir created!");
 
-                        // Recursive hell
+                        // Recursion hell
                         for (int a = 0; a < i; ++a) {
                             recPath = path + @"\MoreWowee" + (a + 1);
                             Console.WriteLine("Wowee recursion #" + a + " = " + recPath);
