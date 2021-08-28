@@ -1,0 +1,34 @@
+﻿using System;
+using System.IO;
+
+namespace U7_Pro
+{
+    class Program
+    {
+        // Using a '@' here to circumvent escape characters
+
+        static void Main(string[] args)
+        {
+            string path = @"C:\temp";
+            Console.WriteLine("Spamming " + path);
+
+            if (Directory.Exists(path)) {
+                for (int i = 0; i < 11; ++i) {
+                    path = @"C:\temp\Wowee" + i;
+                    Console.WriteLine(path);
+
+                    try {
+                        if (!Directory.Exists(path)) {
+                            DirectoryInfo info = Directory.CreateDirectory(path);
+                            Console.WriteLine("> Dir created!");
+                        }
+                    } catch (Exception e) {
+                        Console.WriteLine("oof :( ->" + e.ToString());
+                    } finally {}
+
+                    // Evidence: https://i.imgur.com/iPDVDqO.png
+                }
+            }
+        }
+    }
+}
