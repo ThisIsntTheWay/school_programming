@@ -24,6 +24,7 @@ _UpgradeReport_Files/
 # Directories #
 ###############
 bin/
+secrets/
 Depends22/
 obj/
 TestResults/
