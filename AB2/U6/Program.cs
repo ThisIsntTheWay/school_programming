@@ -21,8 +21,8 @@ namespace U6
                     string recipient = input.Split('@')[0];
                     string domain = input.Split('@')[1];
                     
-                    if (recipient.Length < 1 && inputValid) { inputValid = false; errMsg += "No recipient detected."; }
-                    if (domain.Length <= 0 && inputValid) { inputValid = false; errMsg += "No domain detected."; }
+                    if (recipient.Length < 1 && inputValid) { inputValid = false; errMsg += "Mail user is missing."; }
+                    if (domain.Length <= 0 && inputValid) { inputValid = false; errMsg += "Domain is missing."; }
 
                     // Check if domain is valid
                     // We're not using split() here as a domain could have more than one dots.
