@@ -28,8 +28,9 @@ namespace U6
                     // We're not using split() here as a domain could have more than one dots.
                     if (domain.Contains('.') && inputValid) {
                         string tld = domain.Substring(domain.IndexOf('.') + 1);
+
                         if (!(tld.Length > 0)) {
-                            inputValid = false; errMsg += "TLD is not valid.";
+                            inputValid = false; errMsg += "TLD is not complete.";
                         }
                     } else {
                         inputValid = false;
