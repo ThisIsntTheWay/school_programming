@@ -10,6 +10,9 @@ namespace U7_Pro
         static void Main(string[] args)
         {
             string path = @"C:\temp";
+            string recPath = @"";
+            string rec2Path = @"";
+
             Console.WriteLine("Spamming " + path);
 
             if (Directory.Exists(path)) {
@@ -17,14 +20,29 @@ namespace U7_Pro
                     path = @"C:\temp\Wowee" + i;
                     Console.WriteLine(path);
 
-                    try {
-                        if (!Directory.Exists(path)) {
-                            DirectoryInfo info = Directory.CreateDirectory(path);
-                            Console.WriteLine("> Dir created!");
+                    if (!Directory.Exists(path)) {
+                        DirectoryInfo info = Directory.CreateDirectory(path);
+                        //Console.WriteLine("> Dir created!");
+
+                        // Recursive hell
+                        for (int a = 0; a < i; ++a) {
+                            recPath = path + @"\MoreWowee" + (a + 1);
+                            Console.WriteLine("Wowee recursion #" + a + " = " + recPath);
+
+                            if (!Directory.Exists(recPath)) {
+                                Directory.CreateDirectory(recPath);
+                            }
+                            
+                            for (int b = 0; b < a + 2; ++b) {
+                                rec2Path = recPath + @"\EvenMoreWowee" + (b + 1);
+                                Console.WriteLine("Wowee SECOND recursion #" + b + " = " + rec2Path);
+
+                                if (!Directory.Exists(rec2Path)) {
+                                    Directory.CreateDirectory(rec2Path);
+                                }
+                            }
                         }
-                    } catch (Exception e) {
-                        Console.WriteLine("oof :( ->" + e.ToString());
-                    } finally {}
+                    }
 
                     // Evidence: https://i.imgur.com/iPDVDqO.png
                 }
