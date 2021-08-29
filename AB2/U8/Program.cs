@@ -21,6 +21,9 @@ namespace U8
                 if (Console.ReadLine() == "y") {
                     Console.Write("Specify password length: ");
                     int pwLength = int.Parse(Console.ReadLine());
+                    
+                    // Alternative:
+                    // int pwLength = input.Length;
 
                     Console.Write("Impose a character restriction? (y/n): ");
                     if (Console.ReadLine() == "y") {
