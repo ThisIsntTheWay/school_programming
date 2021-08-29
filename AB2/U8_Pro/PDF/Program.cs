@@ -50,8 +50,6 @@ namespace U8_Pro_PDF
             Console.WriteLine("Processing HTML as PDF (async)...");
             var doc = await Renderer2.RenderHtmlAsPdfAsync(htmlContent);
             doc.SaveAs(@".\output\SPY_ETF-async.pdf");
-
-            Task.Delay(5000).Wait();
         }
     }
 }
