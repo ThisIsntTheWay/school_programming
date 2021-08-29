@@ -28,6 +28,7 @@ secrets/
 Depends22/
 obj/
 TestResults/
+output/
 ###################
 # Web publish log #
 ###################
