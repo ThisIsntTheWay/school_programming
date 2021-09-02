@@ -43,7 +43,8 @@ namespace ValiKlopfi.Lotto
         }
 
         /// <summary>
-        /// Generates x amount of lotto numbers
+        /// Generates x amount of lotto numbers and stores them in a private list.
+        /// Also returns said list.
         /// </summary>
         public static List<int> GenerateNumbers() {
             systemLottoNumbers.Clear();
@@ -58,9 +59,10 @@ namespace ValiKlopfi.Lotto
 
         /// <summary>
         /// Matches user input with system numbers.
+        /// Returns the amount of numbers that have been matched.
         /// </summary>
         /// <param name="output">Whether to print matches to console.</param>
-        public static void MatchNumbers(bool output)
+        public static int MatchNumbers(bool output)
         {
             Console.WriteLine("[Info] Matching numbers...");
 
@@ -79,7 +81,7 @@ namespace ValiKlopfi.Lotto
             else
             {
                 Console.WriteLine("[Error] Lotto lists have bad length.\n > User numbers: {0}\n > System numbers: {1}", userLottoNumbers.Count, systemLottoNumbers.Count);
-                return;
+                return 0;
             }
 
             if (output)
@@ -97,6 +99,8 @@ namespace ValiKlopfi.Lotto
                 Console.Write("[Info] The system numbers were: ");
                 returnList(systemLottoNumbers);
             }
+
+            return matchedLottoNumbers.Count();
         }
 
 

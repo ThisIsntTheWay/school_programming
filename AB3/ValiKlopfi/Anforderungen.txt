@@ -1,5 +1,7 @@
 Info: 	Ordner "U9" beinhaltet den Code der statischen Klasse.
+	 > NUPKG entsprechend unter ...\bin\debug\*.nupkg
 	Der Ordner "Implementation" nutzt dann besagte Klasse.
+	 > Referenziert als externe Assembly, unter .\res\ im Projekt Root.
 
 Die Klasse hat vier statische, private Variablen die zur internen Verwendung der Klasse genutzt werden.
 
