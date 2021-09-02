@@ -5,4 +5,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="U9">
+      <HintPath>U9.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

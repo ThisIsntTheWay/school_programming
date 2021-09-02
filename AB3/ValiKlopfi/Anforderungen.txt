@@ -1,0 +1,6 @@
+Info: 	Ordner "U9" beinhaltet den Code der statischen Klasse.
+	Der Ordner "Implementation" nutzt dann besagte Klasse.
+
+Die Klasse hat vier statische, private Variablen die zur internen Verwendung der Klasse genutzt werden.
+
+19:53 02.09.2021

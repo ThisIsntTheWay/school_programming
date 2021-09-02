@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U9</name>
+    </assembly>
+    <members>
+        <member name="M:ValiKlopfi.Lotto.Lotto.StoreUserInput(System.Int32[])">
+            @brief           Stores user specified lotto numbers.
+            @param ingress   [byte[]] The numbers to store for the user.
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ValiKlopfi.Lotto.Lotto.GenerateNumbers" -->
+        <member name="M:ValiKlopfi.Lotto.Lotto.MatchNumbers(System.Boolean)">
+            @brief           Matches user input with system lotto numbers.
+            @param output    [bool] If true, announce to console.
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ValiKlopfi.Lotto.Lotto.returnList(System.Collections.Generic.List{System.Int32})" -->
+    </members>
+</doc>
