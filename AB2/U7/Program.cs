@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace U7
 {
-    // Review here!
+    // ---------------------------------------------------------
     class Program {
         static void Main(string[] args) {
-            // <t> also accepts classes
             List<Person> theDudes = new List<Person>();
 
             theDudes.Add(new Person("Mark", "Muster", Sprache.Deutsch));
             theDudes.Add(new Person("Jean", "Dupont", Sprache.Französisch));
             theDudes.Add(new Person("John", "Doe", Sprache.Englisch));
 
-            // We could also, alternatively, use an implicit 'var'
+            // We could also use an implicit 'var'
             foreach (Person dude in theDudes) {
                 dude.SageHallo();
             }
         }
     }
+    // ---------------------------------------------------------
 
     class Person
     {
