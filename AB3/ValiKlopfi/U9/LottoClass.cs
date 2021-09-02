@@ -88,8 +88,9 @@ namespace ValiKlopfi.Lotto
             {
                 if (matchedLottoNumbers.Count > 0)
                 {
-                    Console.Write("[Result] Matched {0} numbers: ", matchedLottoNumbers.Count);
-                    returnList(matchedLottoNumbers);
+                    Console.Write("[Result] Matched {0} number(s): ", matchedLottoNumbers.Count);
+                        returnList(matchedLottoNumbers);
+                    Console.WriteLine("");
                 }
                 else
                 {
@@ -97,7 +98,8 @@ namespace ValiKlopfi.Lotto
                 }
 
                 Console.Write("[Info] The system numbers were: ");
-                returnList(systemLottoNumbers);
+                    returnList(systemLottoNumbers);
+                Console.WriteLine("");
             }
 
             return matchedLottoNumbers.Count();

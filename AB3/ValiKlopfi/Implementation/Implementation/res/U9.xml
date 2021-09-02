@@ -17,12 +17,14 @@
         </member>
         <member name="M:ValiKlopfi.Lotto.Lotto.GenerateNumbers">
             <summary>
-            Generates x amount of lotto numbers
+            Generates x amount of lotto numbers and stores them in a private list.
+            Also returns said list.
             </summary>
         </member>
         <member name="M:ValiKlopfi.Lotto.Lotto.MatchNumbers(System.Boolean)">
             <summary>
             Matches user input with system numbers.
+            Returns the amount of numbers that have been matched.
             </summary>
             <param name="output">Whether to print matches to console.</param>
         </member>
