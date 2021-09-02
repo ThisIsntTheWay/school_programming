@@ -17,7 +17,7 @@ namespace ValiKlopfi.Lotto
         private static int lottoNumbers = 6;
 
         /// <summary>
-        /// Enter description here for the second constructor.
+        /// Stores user numbers.
         /// </summary>
         /// <param name="ingress">Array of numbers as input.</param>
         public static void StoreUserInput(int[] ingress)
@@ -26,13 +26,13 @@ namespace ValiKlopfi.Lotto
 
             // Exception handling
             if (ingress.Length < lottoNumbers) {
-                Console.WriteLine("Error: Too few numbers. Expected {0}, got {1}", lottoNumbers, ingress.Length);
+                Console.WriteLine("[Error] Too few user numbers. Expected {0}, got {1}", lottoNumbers, ingress.Length);
                 return;
             } else {
-                for (int i = 0; i <= lottoNumbers; i++) {
+                for (int i = 0; i <= lottoNumbers - 1; i++) {
                     if (ingress[i] > numberLimit)
                     {
-                        Console.WriteLine("Error: Number ({0}) at array index {1} higher than the limit of {2}.", ingress[i], i, numberLimit);
+                        Console.WriteLine("[Info]  Number ({0}) at array index {1} higher than the limit of {2}.", ingress[i], i, numberLimit);
                         return;
                     }
                 }
@@ -42,27 +42,28 @@ namespace ValiKlopfi.Lotto
             return;
         }
 
-        /**
-         * @brief           Generates system lotto numbers and returns as List.
-         */
+        /// <summary>
+        /// Generates x amount of lotto numbers
+        /// </summary>
         public static List<int> GenerateNumbers() {
             systemLottoNumbers.Clear();
 
             var rand = new Random();
-            for (int i = 0; i <= lottoNumbers; i++) {
-                Console.WriteLine("Iteration: {0}", i);
+            for (int i = 1; i <= lottoNumbers; i++) {
                 systemLottoNumbers.Add(rand.Next(numberLimit));
             }
 
             return systemLottoNumbers;
         }
 
-        /**
-         * @brief           Matches user input with system lotto numbers.
-         * @param output    [bool] If true, announce to console.
-         */
+        /// <summary>
+        /// Matches user input with system numbers.
+        /// </summary>
+        /// <param name="output">Whether to print matches to console.</param>
         public static void MatchNumbers(bool output)
         {
+            Console.WriteLine("[Info] Matching numbers...");
+
             if (userLottoNumbers.Count > 0 && systemLottoNumbers.Count > 0)
             {
                 matchedLottoNumbers.Clear();
@@ -77,7 +78,7 @@ namespace ValiKlopfi.Lotto
             }
             else
             {
-                Console.WriteLine("[Error] Lotto lists have bad length.\nUser numbers: {0}\nSystem numbers: {1}", userLottoNumbers.Count, systemLottoNumbers.Count);
+                Console.WriteLine("[Error] Lotto lists have bad length.\n > User numbers: {0}\n > System numbers: {1}", userLottoNumbers.Count, systemLottoNumbers.Count);
                 return;
             }
 
@@ -85,22 +86,24 @@ namespace ValiKlopfi.Lotto
             {
                 if (matchedLottoNumbers.Count > 0)
                 {
-                    Console.Write("Matched numbers: ");
+                    Console.Write("[Result] Matched {0} numbers: ", matchedLottoNumbers.Count);
                     returnList(matchedLottoNumbers);
                 }
                 else
                 {
-                    Console.WriteLine("No numbers have been matched.");
-                    Console.Write("The system numbers were: ");
-                    returnList(systemLottoNumbers);
+                    Console.WriteLine("[Result] No numbers have been matched.");
                 }
+
+                Console.Write("[Info] The system numbers were: ");
+                returnList(systemLottoNumbers);
             }
         }
 
-        /**
-         * @brief           Prints the contents of a list to console on one line, seperated by a space.
-         * @param target    [List] The list to use.
-         */
+
+        /// <summary>
+        /// Returns a list to console on one line, each entry seperated using a space.
+        /// </summary>
+        /// <param name="target">Input list.</param>
         private static void returnList(List<int> target)
         {
             foreach (Object obj in target)

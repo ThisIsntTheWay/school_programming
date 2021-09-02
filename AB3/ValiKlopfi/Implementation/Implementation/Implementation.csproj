@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <Reference Include="U9">
-      <HintPath>U9.dll</HintPath>
+      <HintPath>res\U9.dll</HintPath>
     </Reference>
   </ItemGroup>
 
