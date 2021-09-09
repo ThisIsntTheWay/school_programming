@@ -54,8 +54,8 @@ namespace U10
                 Console.WriteLine("Programm: {0}", shuttle.Programm);
                 Console.WriteLine("Launch vehicle: {0}", shuttle.Traegerrakete);
                 Console.WriteLine("Country: {0}", shuttle.Land.Name);
-                Console.WriteLine("In use from: {0}", einsatzVon);
-                Console.WriteLine("In use until: {0}", einsatzBis);
+                Console.WriteLine("Mission star: {0}", einsatzVon);
+                Console.WriteLine("Mission end:  {0}", einsatzBis);
                 Console.WriteLine("Mission duration: {0} (days)", zeitspanne);
                 Console.WriteLine(" ");
             }
