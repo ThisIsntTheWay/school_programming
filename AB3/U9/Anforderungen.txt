@@ -3,6 +3,8 @@ Info: 	Ordner "U9" beinhaltet den Code der statischen Klasse.
 	Der Ordner "Implementation" nutzt dann besagte Klasse.
 	 > Referenziert als externe Assembly, unter .\res\ im Projekt Root.
 
-Die Klasse hat vier statische, private Variablen die zur internen Verwendung der Klasse genutzt werden.
+Anforderungen:
+Die Klasse sollte Methoden haben, um Benutzereingaben zu speichern, Lottonummern zu generieren und diese dann auch vergleichen.
 
+Ich habe mich dazu entschieden, sämtliche Variablen in der Klasse im privaten Scope zu speichern.
 19:53 02.09.2021
