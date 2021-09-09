@@ -13,8 +13,8 @@ namespace U10
         static void Main(string[] args)
         {
             // Add countries
-            Countries.Add(new Land() { Name = "Sobvjetunion", ISO3 = "USSR", Einwohner = 286730819, Hauptstadt = "Moskau" });
-            Countries.Add(new Land() { Name = "Vereinigte Staten", ISO3 = "USA", Einwohner = 328200000, Hauptstadt = "Washington, D.C." });
+            Countries.Add(new Land() { Name = "Sovjet union", ISO3 = "USSR", Einwohner = 286730819, Hauptstadt = "Moskau" });
+            Countries.Add(new Land() { Name = "Unites states", ISO3 = "USA", Einwohner = 328200000, Hauptstadt = "Washington, D.C." });
             Countries.Add(new Land() { Name = "China", ISO3 = "CHN", Einwohner = 1398000000, Hauptstadt = "Beijing" });
 
             // Add shuttles
@@ -52,11 +52,12 @@ namespace U10
                 var zeitspanne = (einsatzBis - einsatzVon).TotalDays;
 
                 Console.WriteLine("Programm: {0}", shuttle.Programm);
-                Console.WriteLine("Land: {0}", shuttle.Land.Name);
-                Console.WriteLine("Einsatz von: {0}", einsatzVon);
-                Console.WriteLine("Einsatz bis: {0}", einsatzBis);
-                Console.WriteLine("Einsatzdauer (d): {0}", zeitspanne);
-                Console.WriteLine("============================");
+                Console.WriteLine("Launch vehicle: {0}", shuttle.Traegerrakete);
+                Console.WriteLine("Country: {0}", shuttle.Land.Name);
+                Console.WriteLine("In use from: {0}", einsatzVon);
+                Console.WriteLine("In use until: {0}", einsatzBis);
+                Console.WriteLine("Mission duration: {0} (days)", zeitspanne);
+                Console.WriteLine(" ");
             }
         }
     }
