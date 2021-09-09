@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Tsbe.Raumfahrt">
       <HintPath>..\Tsbe.Raumfahrt.1.0.0\lib\net5.0\Tsbe.Raumfahrt.dll</HintPath>
     </Reference>
