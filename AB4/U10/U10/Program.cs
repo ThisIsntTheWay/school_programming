@@ -46,7 +46,7 @@ namespace U10
 
             // Prompt to console
             foreach (var shuttle in Shuttles) {
-                // This can be heaviliy shortened if the OS Culture accepts 'yyyyMMdd' as a standard time format - which mine does not >:(
+                // This could be heaviliy shortened if the OS culture accepts 'yyyyMMdd' as a standard time format - which mine does not >:(
                 DateTime einsatzVon; DateTime.TryParseExact((shuttle.EinsatzVon).ToString(), "yyyyMMdd", CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out einsatzVon);
                 DateTime einsatzBis; DateTime.TryParseExact((shuttle.EinsatzBis).ToString(), "yyyyMMdd", CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out einsatzBis);
                 var zeitspanne = (einsatzBis - einsatzVon).TotalDays;
