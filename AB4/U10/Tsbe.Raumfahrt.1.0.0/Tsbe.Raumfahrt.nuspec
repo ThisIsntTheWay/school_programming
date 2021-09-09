@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Tsbe.Raumfahrt</id>
+    <version>1.0.0</version>
+    <authors>Tsbe.Raumfahrt</authors>
+    <description>Basisklassen zur Abbildung von Raumschiffen
+Keine Validierung, keine Ausnahmebehandlung</description>
+    <copyright>Reto Glarner</copyright>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+</package>
