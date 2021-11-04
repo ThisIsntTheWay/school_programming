@@ -26,8 +26,8 @@ namespace Classes
             Console.WriteLine("> CPUs: {0}", fätzecompi.CpuCount);
             Console.WriteLine("> Cores per CPU: {0}", fätzecompi.CoresPerCpu);
             Console.WriteLine("  > Cores total: {0}", fätzecompi.Cores);
-            Console.WriteLine("> Petaflops: {0}", fätzecompi.Petaflops);
-            Console.WriteLine("  > flops per core: {0}", fätzecompi.FlopsPerCore);
+            Console.WriteLine("> PetaFlops: {0}", fätzecompi.Petaflops);
+            Console.WriteLine("  > TeraFLOPS per core: {0}", fätzecompi.FlopsPerCore);
             Console.WriteLine("> Country: {0} / {1}", fätzecompi.Country.Name, fätzecompi.Country.ISO3);
             Console.WriteLine("> Location: {0}", fätzecompi.Location);
         }

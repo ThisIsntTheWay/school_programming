@@ -17,7 +17,6 @@ namespace Classes
         private string name;
         private double petaflops;
         private string location;
-        private DateTime lastModification;
 
         public int CpuCount {
             get { return cpuCount; }
@@ -29,13 +28,13 @@ namespace Classes
             set { coresPerCpu = value; }
         }
 
-        public double FlopsPerCore {
-            get { return petaflops / cores; }
+        public float FlopsPerCore {
+            get { return (float)(petaflops / Cores) * 1000000000000; }
         }
 
         public long Cores { 
             get { return Convert.ToInt64(CpuCount * CoresPerCpu); }
-            set { cores = value; } 
+            set { cores = value; }
         }
 
         public Country Country {
@@ -44,9 +43,8 @@ namespace Classes
         }
 
         public string Name {
-            get {
-                return name;
-            } set {
+            get { return name; }
+            set {
                 if (value.Length <= 30) {
                     name = value;
                 } else {
